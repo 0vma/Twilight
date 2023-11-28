@@ -2,6 +2,8 @@ print("[*] Initializing Twilight Helper...")
 local Stats = game:GetService("Stats")
 local Players = game:GetService("Players")
 local Localization = game:GetService("LocalizationService")
+local TweenService = game:GetService("TweenService")
+local VirtualUser = game:GetService("VirtualUser")
 return {
   Functions = {
     GetMemoryUsage = function()
@@ -26,7 +28,22 @@ return {
         end
     end,
 		GetPing = function()
-			return Stats.Network.ServerStatsItem["Data Ping"]:GetValue()
-		end;
+				return Stats.Network.ServerStatsItem["Data Ping"]:GetValue()
+		end,
+		GetDate = function(t, ctick)
+				return t == 'Date' and string.format("%x", ctick) or t == 'Time' and string.format("%X", ctick) or t == 'Day' and string.format("%A", ctick)
+		end,
+		Tween = function(obj, tweeninfo: tweeninfo, goal, dowait: boolean)
+				local nTween = TweenService:Create(obj, tweeninfo, goal)
+			  nTween:Play()
+			  if dowait then nTween.Completed:Wait() end
+		end,
+		InitAntiAFK = function()
+				game:GetService("Players").LocalPlayer.Idled:connect(function()
+					VirtualUser:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+					wait(1)
+					VirtualUser:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+				end)
+		end
   },
 }
