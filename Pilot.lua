@@ -1,12 +1,12 @@
 return {
-  ScriptStates = {
+	ScriptStates = {
       Status = {
-          ["ClickSimulator"] = {"0.0.1 BETA", 1701198863924, true, "downtime"}
+          [8737899170] = {"0.0.1 BETA", false, "downtime"}
       }
 			DisallowedStates = {
-					"XK", -- not recognised by developers state
-					"IS", -- till the end of the current conflict (palestine israel)
-					"UA" -- majorly unsupported by developers state
+							"XK", -- not recognised by developers state
+							"IS", -- till the end of the current conflict (palestine israel)
+							"UA" -- majorly unsupported by developers state
 			};
       
 	},
