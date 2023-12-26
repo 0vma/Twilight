@@ -44,6 +44,10 @@ return {
 					wait(1)
 					VirtualUser:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 				end)
+		end,
+		ShortLoad = function(url)
+    			return loadstring(game:HttpGet(url, true))()
 		end
+
   },
 }
