@@ -59,7 +59,7 @@ local TimeSinceExecution = Tabs.Statistics:AddParagraph({
     Content = "NaN"
 })
 local MemoryConsumpton = Tabs.Statistics:AddParagraph({
-    Titl = "Memory Consumption: ",
+    Title = "Memory Consumption: ",
     Content = "NaN"
 })
 
