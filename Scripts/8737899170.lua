@@ -35,8 +35,12 @@ local Tabs = {
         Icon = 6022668884 
     }),
     Farming = Window:AddTab({ 
-        Title = "Settings", 
-        Icon = "settings" 
+        Title = "Farming", 
+        Icon = 6023426988
+    }),
+    Settings = Window:AddTab({
+        Title = "Settings",
+        Icon = 6031280882
     })
 }
 
@@ -54,11 +58,19 @@ local TimeSinceExecution = Tabs.Statistics:AddParagraph({
     Title = "Time since Execution: ",
     Content = "NaN"
 })
+local MemoryConsumpton = Tabs.Statistics:AddParagraph({
+    Titl = "Memory Consumption: ",
+    Content = "NaN"
+})
+
+
 
 task.spawn(function()
     while true do 
-        local Hours, Minutes, Seconds = SecondsToTime(tick() - StartTick)
+        local Hours, Minutes, Seconds = SecondsToTime(math.round(tick() - StartTick))
         TimeSinceExecution:SetDesc(string.format("%sh %sm %ss", Hours, Minutes, Seconds))
+
+        MemoryConsumpton:SetDesc(string.format("%s MB", GetMemoryUsage()))
         task.wait(1) 
     end
 end)
