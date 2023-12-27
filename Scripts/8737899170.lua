@@ -19,8 +19,8 @@ local SaveManager = ShortLoad("https://raw.githubusercontent.com/0vma/Twilight/m
 
 local Window = Fluent:CreateWindow({
     Title = "Pet Simulator 99 | Twilight Softworks",
-    SubTitle = "discord.gg/invite/EtWyBV2Wts",
-    TabWidth = 160,
+    SubTitle = "Version: 0.0.1",
+    TabWidth = 30,
     Size = UDim2.fromScale(0.55, 0.75),
     Acrylic = false,
     Theme = "Dark",
