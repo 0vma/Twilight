@@ -12,6 +12,7 @@ local ShortLoad = Functions.ShortLoad
 local GetLocalPlayer = Functions.GetLocalPlayer
 local GetLocalCharacter = Functions.GetLocalCharacter 
 local GetMemoryUsage = Functions.GetMemoryUsage 
+local SecondsToTime = FUnctions.SecondsToTime
 
 local Fluent = ShortLoad("https://raw.githubusercontent.com/0vma/Twilight/main/Dependencies/UILibrary/Main.lua")
 local InterfaceManager = ShortLoad("https://raw.githubusercontent.com/0vma/Twilight/main/Dependencies/UILibrary/InterfaceManager.lua")
@@ -49,13 +50,15 @@ Fluent:Notify({
     Duration = 1 
 }) 
 
-local p = Tabs.Statistics:AddParagraph({
-    Title = "Paragraph",
-    Content = "This is a paragraph.\nSecond line!"
+local TimeSinceExecution = Tabs.Statistics:AddParagraph({
+    Title = "Time since Execution: ",
+    Content = "NaN"
 })
 
-do 
-    task.wait(10)
-    p:SetTitle("haiii")
-    p:SetDesc('baiiii')
-end 
+task.spawn(function()
+    while true do 
+        local Hours, Minutes, Seconds = SecondsToTime(tick() - StartTick)
+        TimeSinceExecution:SetDesc(string.format("%sh %sm %ss", Hours, Minutes, Seconds))
+        task.wait(1) 
+    end
+end)
