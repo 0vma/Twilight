@@ -16,7 +16,7 @@ print("INFO | Script State: UP")
 getgenv()._G.runnerapproved = true
 
 local scs, err = pcall(function()
-    loadstring(game:HttpGet(Path, tostring(GameID), ".lua"), true)()
+    loadstring(game:HttpGet(Path..tostring(GameID)..".lua"), true)()
 end)
 
 assert(not err, string.format("ERROR | Script returned an error %s", err))
