@@ -5,7 +5,7 @@ if not game:IsLoaded() then
 end 
 
 local Pilot = loadstring(game:HttpGet("https://raw.githubusercontent.com/0vma/Twilight/main/Pilot.lua", true))()
-local Path = "https://raw.githubusercontent.com/0vma/Twilight/Scripts/"
+local Path = "https://raw.githubusercontent.com/0vma/Twilight/main/Scripts/"
 local GameID = game.PlaceId
 
 assert(Pilot.ScriptStates.Status[GameID], "ERROR | Invalid Game Place ID")
