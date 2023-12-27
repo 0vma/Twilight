@@ -21,7 +21,7 @@ Fluent:ToggleTransparency(false)
 local Window = Fluent:CreateWindow({
     Title = "Pet Simulator 99 | Twilight Softworks",
     SubTitle = "Version: 0.0.1",
-    TabWidth = 160,
+    TabWidth = 90,
     Size = UDim2.fromScale(0.55, 0.75),
     Acrylic = false,
     Theme = "Dark",
