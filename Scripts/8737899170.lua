@@ -13,6 +13,7 @@ local GetLocalPlayer = Functions.GetLocalPlayer
 local GetLocalCharacter = Functions.GetLocalCharacter 
 local GetMemoryUsage = Functions.GetMemoryUsage 
 local SecondsToTime = Functions.SecondsToTime
+local GetPing = Functions.GetPing
 
 local Fluent = ShortLoad("https://raw.githubusercontent.com/0vma/Twilight/main/Dependencies/UILibrary/Main.lua")
 local InterfaceManager = ShortLoad("https://raw.githubusercontent.com/0vma/Twilight/main/Dependencies/UILibrary/InterfaceManager.lua")
@@ -62,8 +63,10 @@ local MemoryConsumpton = Tabs.Statistics:AddParagraph({
     Title = "Memory Consumption: ",
     Content = "NaN"
 })
-
-
+local Ping = Tabs.Statistics:AddParagraph({
+    Title = "Ping: ",
+    Content = "NaN"
+})
 
 task.spawn(function()
     while true do 
@@ -71,6 +74,7 @@ task.spawn(function()
         TimeSinceExecution:SetDesc(string.format("%sh %sm %ss", Hours, Minutes, Seconds))
 
         MemoryConsumpton:SetDesc(string.format("%s MB", math.floor(GetMemoryUsage())))
+        Ping:SetDesc(string.format("%s Miliseconds", math.round(GetPing())))
         task.wait(1) 
     end
 end)
