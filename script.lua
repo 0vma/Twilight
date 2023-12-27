@@ -21,5 +21,7 @@ local scs, err = pcall(function()
     loadstring(game:HttpGet(Compiled, true))()
 end)
 
-assert(not err, string.format("ERROR | Script returned an error %s", err))
+if err ~= nil then 
+    error("Error Occured: "..err or "Unknown")
+end
 print("INFO | Script Executed Successfully!")
