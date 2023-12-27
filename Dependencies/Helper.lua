@@ -47,6 +47,13 @@ return {
 		end,
 		ShortLoad = function(url)
     			return loadstring(game:HttpGet(url, true))()
+		end,
+		SecondsToTime(seconds)
+		    local hours = math.floor(seconds / 3600)
+		    local minutes = math.floor((seconds % 3600) / 60)
+		    local remainingSeconds = seconds % 60
+		
+		    return hours, minutes, remainingSeconds
 		end
 
   },
