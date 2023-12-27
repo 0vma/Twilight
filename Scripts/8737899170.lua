@@ -75,4 +75,3 @@ task.spawn(function()
     end
 end)
 
-Window:SelectTab(1)
