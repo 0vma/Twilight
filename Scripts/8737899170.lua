@@ -1,7 +1,7 @@
 assert(getgenv()._G.runnerapproved, "ERROR | Make sure to not run the script directly, may cause unpredictable issues or even BANS! Make sure load script.lua at the main github page first")
 
 local Success, Helper = pcall(function()
-    return loadstring("https://raw.githubusercontent.com/0vma/Twilight/main/Dependencies/Helper.lua", true)()
+    return loadstring(game:HttpGet("https://raw.githubusercontent.com/0vma/Twilight/main/Dependencies/Helper.lua", true))()
 end)
 
 assert(Success, "ERROR | Helper has failed to load!")
