@@ -12,7 +12,7 @@ local ShortLoad = Functions.ShortLoad
 local GetLocalPlayer = Functions.GetLocalPlayer
 local GetLocalCharacter = Functions.GetLocalCharacter 
 local GetMemoryUsage = Functions.GetMemoryUsage 
-local SecondsToTime = FUnctions.SecondsToTime
+local SecondsToTime = Functions.SecondsToTime
 
 local Fluent = ShortLoad("https://raw.githubusercontent.com/0vma/Twilight/main/Dependencies/UILibrary/Main.lua")
 local InterfaceManager = ShortLoad("https://raw.githubusercontent.com/0vma/Twilight/main/Dependencies/UILibrary/InterfaceManager.lua")
