@@ -17,10 +17,11 @@ local Fluent = ShortLoad("https://raw.githubusercontent.com/0vma/Twilight/main/D
 local InterfaceManager = ShortLoad("https://raw.githubusercontent.com/0vma/Twilight/main/Dependencies/UILibrary/InterfaceManager.lua")
 local SaveManager = ShortLoad("https://raw.githubusercontent.com/0vma/Twilight/main/Dependencies/UILibrary/SaveManager.lua")
 
+Fluent:ToggleTransparency(false)
 local Window = Fluent:CreateWindow({
     Title = "Pet Simulator 99 | Twilight Softworks",
     SubTitle = "Version: 0.0.1",
-    TabWidth = 50,
+    TabWidth = 30,
     Size = UDim2.fromScale(0.55, 0.75),
     Acrylic = false,
     Theme = "Dark",
