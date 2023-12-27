@@ -18,7 +18,7 @@ local InterfaceManager = ShortLoad("https://raw.githubusercontent.com/0vma/Twili
 local SaveManager = ShortLoad("https://raw.githubusercontent.com/0vma/Twilight/main/Dependencies/UILibrary/SaveManager.lua")
 
 local Window = Fluent:CreateWindow({
-    Title = string.format("Pet Simulator 99 | Twilight Softworks")
+    Title = "Pet Simulator 99 | Twilight Softworks",
     SubTitle = "discord.gg/invite/EtWyBV2Wts",
     TabWidth = 160,
     Size = UDim2.fromScale(0.45, 0.65),
