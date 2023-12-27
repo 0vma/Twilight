@@ -70,8 +70,9 @@ task.spawn(function()
         local Hours, Minutes, Seconds = SecondsToTime(math.round(tick() - StartTick))
         TimeSinceExecution:SetDesc(string.format("%sh %sm %ss", Hours, Minutes, Seconds))
 
-        MemoryConsumpton:SetDesc(string.format("%s MB", GetMemoryUsage()))
+        MemoryConsumpton:SetDesc(string.format("%s MB", math.floor(GetMemoryUsage())))
         task.wait(1) 
     end
 end)
 
+Window:SelectTab(1)
