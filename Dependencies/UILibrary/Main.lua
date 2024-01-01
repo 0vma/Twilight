@@ -133,9 +133,9 @@ local aa = {
             DialogOpen = false,
             UseAcrylic = false,
             Acrylic = false,
-            Transparency = true,
+            Transparency = false,
             MinimizeKeybind = nil,
-            MinimizeKey = Enum.KeyCode.LeftControl,
+            MinimizeKey = Enum.KeyCode.RightShift,
             GUI = w
         }
         function x.SafeCallback(y, z, ...)
