@@ -3,6 +3,8 @@ local UI = Instance.new("ScreenGui")
 local Toggle = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
 local UIGradient = Instance.new("UIGradient")
+local UIStrokeOne = Instance.new("UIStroke")
+local UIStrokeTwo = Instance.new("UIStroke")
 local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
 
@@ -24,6 +26,14 @@ Toggle.TextColor3 = Color3.fromRGB(0, 170, 255)
 Toggle.TextScaled = true
 Toggle.TextSize = 14.000
 Toggle.TextWrapped = true
+
+UIStrokeOne.Parent = Toggle
+UIStrokeOne.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStrokeOne.Thickness = 2
+
+UIStrokeTwo.Parent = Toggle
+UIStrokeTwo.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStrokeTwo.Thickness = 2
 
 UICorner.CornerRadius = UDim.new(1, 8)
 UICorner.Parent = Toggle
