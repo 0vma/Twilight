@@ -3324,6 +3324,7 @@ local aa = {
             print(d.Section or "Not SECTION")
 
             if d.Section then
+                print(e.Frame:GetFullName())
                 e.TitleLabel.TextXAlignment = Enum.TextXAlignment.Center
                 e.Frame.BackgroundTransparency = 0.8
                 e.TitleLabel.Parent.Parent.UIStroke.Color = Color3.fromRGB(255, 255, 255)
