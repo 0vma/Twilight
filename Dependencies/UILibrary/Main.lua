@@ -3327,9 +3327,11 @@ local aa = {
                 e.TitleLabel.TextXAlignment = Enum.TextXAlignment.Center
                 e.Frame.BackgroundTransparency = 0.8
                 e.Frame.UIStroke.Color = Color3.fromRGB(255, 255, 255)
-                e.Frame.UIStroke:GetPropertyChangedSignal("Color"):Once(function()
-                    e.Frame.UIStroke.Color = Color3.fromRGB(255, 255, 255)
-                end)
+                task.spawn(function() 
+                while task.wait() do 
+                e.Frame.UIStroke.Color = Color3.fromRGB(255, 255, 255)
+end
+end)
                 print(e.Frame:GetFullName())
                 print(e.Frame.UIStroke.Color)
                 e.DescLabel.TextXAlignment = Enum.TextXAlignment.Center
