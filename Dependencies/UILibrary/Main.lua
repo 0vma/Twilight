@@ -3322,7 +3322,13 @@ local aa = {
             print(e.Frame)
             setclipboard(game:GetService("HttpService"):JSONEncode(e))
             print(d.Section or "Not SECTION")
-            e.Frame.BackgroundTransparency = 0.92
+
+            if d.Section then
+                e.TitleLabel.TextXAlignment = Enum.TextXAlignment.Center
+                e.Frame.BackgroundTransparency = 0.6
+            else
+                e.Frame.BackgroundTransparency = 0.92
+            end
             e.Border.Transparency = 0.6
             return e
         end
