@@ -3318,7 +3318,9 @@ local aa = {
             assert(d.Title, "Paragraph - Missing Title")
             d.Content = d.Content or ""
             local e = ac(ag.Element)(d.Title, d.Content, aj.Container, false)
-            print(e.Frame:GetFullName())
+            print('Type: '..typeof(e.Frame))
+            print(e.Frame)
+            setclipboard(game:GetService("HttpService"):JSONEncode(e))
             print(d.Section or "Not SECTION")
             e.Frame.BackgroundTransparency = 0.92
             e.Border.Transparency = 0.6
