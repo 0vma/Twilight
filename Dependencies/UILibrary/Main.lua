@@ -3325,8 +3325,8 @@ local aa = {
 
             if d.Section then
                 e.TitleLabel.TextXAlignment = Enum.TextXAlignment.Center
-                e.Frame.BackgroundTransparency = 0.6
-                e.Frame.Parent.UIStroke.Color = Color3.fromRGB(255, 255, 255)
+                e.Frame.BackgroundTransparency = 0.8
+                e.Frame.UIStroke.Color = Color3.fromRGB(255, 255, 255)
                 e.DescLabel.TextXAlignment = Enum.TextXAlignment.Center
             else
                 e.Frame.BackgroundTransparency = 0.92
