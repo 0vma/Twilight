@@ -3318,21 +3318,13 @@ local aa = {
             assert(d.Title, "Paragraph - Missing Title")
             d.Content = d.Content or ""
             local e = ac(ag.Element)(d.Title, d.Content, aj.Container, false)
-            print('Type: '..typeof(e.Frame))
-            print(e.Frame)
-            setclipboard(game:GetService("HttpService"):JSONEncode(e))
-            print(d.Section or "Not SECTION")
-
             if d.Section then
                 e.TitleLabel.TextXAlignment = Enum.TextXAlignment.Center
                 e.Frame.BackgroundTransparency = 0.8
                 e.Frame.UIStroke.Color = Color3.fromRGB(255, 255, 255)
                 e.Frame.UIStroke:GetPropertyChangedSignal("Color"):Connect(function()
-                        print('CHANGED')
                         e.Frame.UIStroke.Color = Color3.fromRGB(255, 255, 255)
                 end)
-                print(e.Frame:GetFullName())
-                print(e.Frame.UIStroke.Color)
                 e.DescLabel.TextXAlignment = Enum.TextXAlignment.Center
             else
                 e.Frame.BackgroundTransparency = 0.92
