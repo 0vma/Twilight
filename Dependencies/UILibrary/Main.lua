@@ -3337,6 +3337,9 @@ local aa = {
 
             if d.DescSize then
                 e.DescLabel.TextSize = d.DescSize
+                e.DescLabel:GetPropertyChangedSignal('TextSize'):Connect(function()
+                    e.DescLabel.TextSize = d.DescSize
+                end)
             end
             e.Border.Transparency = 0.6
             return e
