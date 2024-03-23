@@ -3335,8 +3335,8 @@ local aa = {
                 e.DescLabel.TextXAlignment = Enum.TextXAlignment.Center
             end 
 
-            if d.DescScaled then
-                e.DescLabel.TextScaled = true
+            if d.DescSize then
+                e.DescLabel.TextSize = d.DescSize
             end
             e.Border.Transparency = 0.6
             return e
