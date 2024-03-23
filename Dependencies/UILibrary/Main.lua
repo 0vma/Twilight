@@ -3329,6 +3329,15 @@ local aa = {
             else
                 e.Frame.BackgroundTransparency = 0.92
             end
+
+            if d.Centered then
+                e.TitleLabel.TextXAlignment = Enum.TextXAlignment.Center
+                e.DescLabel.TextXAlignment = Enum.TextXAlignment.Center
+            end 
+
+            if d.DescScaled then
+                e.DescLabel.TextScaled = true
+            end
             e.Border.Transparency = 0.6
             return e
         end
