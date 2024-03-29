@@ -7,6 +7,8 @@
     License: MIT
     GitHub: https://github.com/dawid-scripts/Fluent
 --]]
+
+setthreadcontext(8)
 local a, b = {
     {
         1,
