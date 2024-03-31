@@ -6,7 +6,7 @@
     Author: dawid
     License: MIT
     GitHub: https://github.com/dawid-scripts/Fluent
---]]
+]]
 
 
 local a, b = {
